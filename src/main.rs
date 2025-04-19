@@ -1,4 +1,4 @@
-use dialoguer::FuzzySelect;
+use dialoguer::{theme::ColorfulTheme, FuzzySelect};
 use std::process::{Command, Stdio};
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -30,7 +30,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     }
 
     // ユーザーにモデルを選択させる
-    let selection = FuzzySelect::new()
+    let selection = FuzzySelect::with_theme(&ColorfulTheme::default())
         .with_prompt("Select a model")
         .items(&models)
         .interact()?;
@@ -41,7 +41,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     Command::new("aider")
         .arg("--model")
         .arg(selected_model)
-        .status()?;
+        .spawn()?;
 
     Ok(())
 }

@@ -3,7 +3,7 @@
 version = 4
 
 [[package]]
-name = "aider-select"
+name = "aider-model-selector"
 version = "0.1.0"
 dependencies = [
  "dialoguer",
