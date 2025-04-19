@@ -18,11 +18,11 @@ A Rust CLI tool that helps you select and use AI models from Aider via OpenRoute
 ## Installation
 
 ```bash
-# プロジェクトをビルドしてバイナリをインストール
+# Build the project and install the binary
 cargo install --path .
 
-# インストール後、バイナリは ~/.cargo/bin/ に配置され、
-# どこからでも実行可能になります
+# After installation, the binary will be placed in ~/.cargo/bin/
+# and can be executed from anywhere
 ```
 
 ## Usage
